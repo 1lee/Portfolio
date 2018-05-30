@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(87, 78, 90, 1) 34%, rgba(68, 64, 71, 1) 82%, rgba(101, 100, 102, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(34%, rgba(87, 78, 90, 1)), color-stop(82%, rgba(68, 64, 71, 1)), color-stop(100%, rgba(101, 100, 102, 1)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(87, 78, 90, 1) 34%, rgba(68, 64, 71, 1) 82%, rgba(101, 100, 102, 1) 100%);
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(87, 78, 90, 1) 34%, rgba(68, 64, 71, 1) 82%, rgba(101, 100, 102, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(87, 78, 90, 1) 34%, rgba(68, 64, 71, 1) 82%, rgba(101, 100, 102, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(87, 78, 90, 1) 34%, rgba(68, 64, 71, 1) 82%, rgba(101, 100, 102, 1) 100%);
+}
+
+.pageOne {
+    position: relative;
+    height: 94vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navigation {
+    padding-top: 1%;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.side-nav {
+    background-color: #ffe0b2;
+}
+
+.side-nav a {
+    color: #000;
+}
+
+#sidenav-overlay {
+    z-index: 10;
+}
+
+.bulb3d {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    /* This must match the height of .header-image or both images will show */
+    width: auto;
+    background-image: url("../img/3dbulbm.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-image {
+    position: relative;
+    z-index: -3;
+    height: 100%;
+    width: auto;
+    background-image: url("../img/bulbm.jpeg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    opacity: 0.08;
+    overflow: hidden;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url() no-repeat;
+    background-size: cover;
+}
+
+.quote {
+    position: absolute;
+    color: #fff;
+    font-size: 7vh;
+    font-weight: 400;
+    width: 100%;
+    padding-right: 9%;
+
+    bottom: 9%;
+    white-space: normal;
+    z-index: -1;
+    font-family: 'Gruppo', cursive;
+}
+
+.author {
+    position: absolute;
+    color: #fff;
+    font-size: 5vh;
+    width: 100%;
+    padding-right: 9%;
+
+    bottom: 3%;
+    white-space: nowrap;
+    z-index: -1;
+    font-family: 'Gruppo', cursive;
+}
+
+.scrollHome {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.scrollHome i {
+    text-align: center;
+}
+
+.pageTwo {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding-top: 15%;
+}
+
+h2 {
+    color: #fff;
+}
+.card {
+    height: 33%;
+    width: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.card .card-content {
+    padding: 5%;
+}
+
+.card .card-content p {
+    padding: 6%;
+    font-family: 'Gruppo', cursive;
+    font-size: 1.2em;
+}
+
+.card .card-action {
+    padding: 10px;
+}
+
+h3 {
+    overflow: hidden;
+}
+
+.pageThree {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.headshot {
+    height: 15%;
+    width: auto;
+    margin: 5px;
+}
+
+.aboutImage {
+    height: 100vh;
+    width: auto;
+    position: sticky;
+    background-image: url(../img/me-ideas-sm.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    opacity: 0.1;
+}
+
+.aboutMeText {
+    position: absolute;
+    font-size: 0.9em;
+    height: 100%;
+    width: 50%;
+    color: white;
+    right: 5%;
+    top: 13%;
+    transition: width 1s linear 1s;
+}
+
+.aboutMeText p {
+    line-height: 1.6em;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMeText {
+        position: absolute;
+        height: 100%;
+        width: 90%;
+        color: white;
+        right: 5%;
+        top: 10%;
+        font-size: 0.84em;
+        transition: width 1s linear 1s;
+    }
+    .aboutMeText p {
+        line-height: 1.3em;
+    }
+}
+
+.pageFour {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.map {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/mapt.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h5 {
+    top: 0;
+    overflow: hidden;
+}
+
+.web-form {
+    position: relative;
+    padding: 5%;
+    opacity: 0.8;
+    height: 67%;
+    width: 40%;
+    margin-left: 45%;
+    padding: 20px;
+    background-color: #757575;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 1%;
+    overflow: hidden;
+}
+
+placeholder {
+    color: #fff;
+}
+
+input {
+    color: #fff;
+}
+
+textarea {
+    color: #fff;
+    max-height: 30%;
+    min-height: 30%;
+    max-width: 100%;
+}
+
+.spacer {
+    height: 10px;
+    width: 100%;
+}
+
+.footer-div {
+    position: absolute;
+    height: 17%;
+    width: 34%;
+    background-color: #d84315;
+    opacity: 0.85;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-top-right-radius: 7px;
+}
+
+.footer-accent {
+    height: 66%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    background-color: #bf360c;
+    border-top-right-radius: 7px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+
+/* unvisited link */
+
+.footer-accent a:link {
+    color: #FFF;
+}
+
+
+/* visited link */
+
+.footer-accent a:visited {
+    color: #fafafa;
+}
+
+
+/* mouse over link */
+
+.footer-accent a:hover {
+    color: #ff3d00;
+}
+
+
+/* selected link */
+
+.footer-accent a:active {
+    color: #fafafa;
+}
+
+@media only screen and (max-width: 600px) {
+    .pageTwo {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .footer-div {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .email {
+        display: none;
+    }
+}
+
+i {
+    margin: 0 5px 0 5px;
+}
+
+.email {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.C {
+    position: absolute;
+    font-size: 0.7em;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    color: #ff6e40;
+}
+
+_:-ms-lang(x), _:-webkit-full-screen, .pageOne {
+  height: 100vh;
+}
+
+_:-ms-lang(x), _:-webkit-full-screen, .navigation {
+    z-index: 1000;
+    position: fixed;
+    opacity: 1;
+    overflow: hidden;
+}
+
+_:-ms-lang(x), _:-webkit-full-screen, #bgvid {
+    z-index: 200;
+}

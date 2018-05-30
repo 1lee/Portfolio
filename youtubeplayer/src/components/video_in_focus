@@ -1,0 +1,35 @@
+import React from 'react';
+import moment from 'moment';
+
+const VideoInFocus = ({video}) => {
+
+  if (!video){
+    return <div>Loading...</div>;
+  }//in case the page loads before video is available
+console.log(video);
+
+const videoId = video.id.videoId; //id for youtube embed
+const channelId = video.snippet.channelId;//id for channel name
+const url = `https://www.youtube.com/embed/${videoId}`;
+const channelUrl = `https://www.youtube.com/channel/${channelId}`;
+
+  return(
+    <div className="video-detail col-md-8">
+      <div className="embed-responsive embed-responsive-16by9">
+        <iframe className="embed-responsive-item" src={url}></iframe>
+      </div>
+      <div className="details">
+        <div className="title">{video.snippet.title}</div>
+        <div className="channel"><a href={channelUrl}>{video.snippet.channelTitle}</a></div>
+        <div className="date">{moment(video.snippet.publishedAt).format('MMMM Do YYYY, h:mm:ss a')}</div>
+        <hr/>
+        <div>{video.snippet.description}</div>
+        <hr/>
+
+      </div>
+    </div>
+  );//END return
+
+};//END VideoInFocus
+
+export default VideoInFocus;
